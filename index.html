@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="blur">
+    <div class="center">
+      <h2>SIGNUP</h2>
+      <p>Please enter details to Register.</p>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" placeholder="First Name" id="name1" required />
+        </div>
+        <div class="txt_field">
+          <input type="text" placeholder="Last Name" id="name2" required />
+        </div>
+        <div class="txt_field">
+          <input type="password" placeholder="Password" id="name3" maxlength="10" required />
+        </div>
+        <div class="txt_field">
+          <input type="text" placeholder="Address" id="name4" required />
+        </div>
+        <div class="txt_field">
+          <input type="number" placeholder="Age" id="name5" required/>
+        </div>
+
+        <button type="button" id="out2" class="btn" onclick="openpopup()">
+          Register
+        </button>
+
+        <div class="signup_link">
+          <a href="D:\Project\box\index.html">Create an account</a>
+        </div>
+
+      
+          <div class="popup" id="popup">
+            <img
+              src="D:\Project\loginPage\logo.png"
+            />
+            <h4>Thank You <div id="sample"></div> For Registering With Us!</h4>
+           
+            <p>Your details has been successfully submitted.Thanks!</p>
+            <button type="button" onclick="closepopup()">Ok</button>
+          </div>
+        </div>
+      </div>
+
+        <script>
+          let popup = document.getElementById("popup");
+
+          function openpopup() {
+            popup.classList.add("open-popup");
+            out1.innerHTML = text1.value;
+            var blur = document.getElementById('blur');
+            blur.classList.openpopup('active')
+
+          }
+          function closepopup() {
+            popup.classList.remove("open-popup");
+          }
+          const text1 = document.getElementById("name1");
+          const text5 = document.getElementById("name5");
+          const out1 = document.getElementById("sample");
+          const btn1 = document.getElementById("out2");
+
+          function fun1(){
+            out1.innerHTML = text1.value;
+            btn1.innerHTML = text2.value;
+          }
+          
+
+
+
+        </script>
+      </form>
+    </div>
+  </body>
+</html>
